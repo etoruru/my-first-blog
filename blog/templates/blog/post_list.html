@@ -26,17 +26,20 @@
     </head>
     <body>
         <h1>That's My Blog</h1>
+       {% for post in posts %}
         <div>
-            <h2><a href="#">First Blog</a></h2>
-            <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+            <h2><a href="#">{{ post.title }}</a></h2>
+            <p>{{ post.text|linebreaksbr }}</p>
+            <p>published: {{ post.published_date }}</p>
         </div>
-        <div>
+        {% endfor %}
+       <!-- <div>
             <h2><a href="#">Second Blog</a></h2>
              <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
          </div>
         <div>
             <h2><a href="#">Third Blog</a></h2>
              <p>Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
-        </div>
+        </div>-->
     </body>
 </html>
